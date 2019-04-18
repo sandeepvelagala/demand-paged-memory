@@ -42,10 +42,39 @@ void main(){
 	  goto main; 	
 	 }
 }
+void userInput(){
+	
+	
+	printf("\nEnter service Page Fault (Empty|not Modified)[in milliseconds] :  ");
 	scanf("%lf",&spfe);
 	printf("\nEnter Service Page Fault (Modified Page)[in milliseconds] : ");
 	scanf("%lf",&spfm);
 	printf("\n Enter Memory Access Time[in nanoseconds] :");
+	scanf("%lf",&memacctym);
+	printf("\nEnter Percentage of time the page to be replaced is modified:");
+	scanf("%lf",&tympagmod);
+	printf("\n Enter Effective Access time[in nanoseconds] : ");
+	scanf("%lf",&effacctym);
+
+	spfens = (spfe*1000000);
+	spfmns = (spfm*1000000);
+	tympagmodp = (tympagmod/100);
+	system("cls");   
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n********************Page Fault rate calculated For************************");
+	system("COLOR 01");          //TO cReate a colour changing welcome to the user
+    
+    system("cls");
+	printf("\n Service Page Fault[Empty|Page Not Modified] =  %lf \n",spfens);
+	printf("\n Service Page Fault [Modified Page][ nanoseconds] :%lf \n",spfmns);
+	printf("\n Memory Access Time[in nanoseconds] : %lf\n",memacctym);
+	printf(" Effective Access Time %lf\n",effacctym);
+    PFR =  page_fault_rate(spfens,spfmns,memacctym,tympagmodp,effacctym);
+	printf("\nMaximum Acceptable Page Fault rate = %.2e[exponential notation]",PFR);
+	printf("\n\nPress any key to goto main menu");
+	getch();
+
 
 }
 
+
+}
