@@ -61,8 +61,18 @@ void userInput(){
 	tympagmodp = (tympagmod/100);
 	system("cls");   
 	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n********************Page Fault rate calculated For************************");
-	system("COLOR 01");          //TO cReate a colour changing welcome to the user
-    
+	system("COLOR 01");
+    sleep(1);f
+    system("COLOR 02");
+    sleep(1);
+    system("COLOR 0D");
+    sleep(1);
+    system("COLOR 0C");
+    sleep(1);
+    system("COLOR 0A");
+    sleep(1);
+    system("COLOR 03");
+    sleep(1);
     system("cls");
 	printf("\n Service Page Fault[Empty|Page Not Modified] =  %lf \n",spfens);
 	printf("\n Service Page Fault [Modified Page][ nanoseconds] :%lf \n",spfmns);
@@ -92,7 +102,3 @@ double page_fault_rate(double servicePageFaultEmpty,double servicePageFaultMod,d
 
 }
 
-
-
-
-}
