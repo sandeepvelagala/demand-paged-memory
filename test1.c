@@ -76,5 +76,23 @@ void userInput(){
 
 }
 
+double page_fault_rate(double servicePageFaultEmpty,double servicePageFaultMod,double memAccess,double timesPages,double effAccess){
+	double assume,serve;
+	double numErator,denOminator;
+	double pageFault;
+	 assume = (1- timesPages)*servicePageFaultEmpty;
+	 serve = timesPages*servicePageFaultMod;
+	 numErator = effAccess - memAccess;
+     denOminator = (assume+serve);
+
+	pageFault = numErator/denOminator;
+	
+	return pageFault;
+
+
+}
+
+
+
 
 }
